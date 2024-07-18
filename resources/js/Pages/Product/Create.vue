@@ -17,6 +17,12 @@ const form = useForm({
     'weight': null,
     'description': '',
 })
+
+const store = () => {
+    form.post(route('products.store'), {
+        onSuccess: () => form.reset()
+    })
+}
 </script>
 
 <template>
